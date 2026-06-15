@@ -1,0 +1,22 @@
+# Node / React Native
+node_modules/
+.expo/
+.expo-shared/
+*.log
+android/
+ios/
+.env
+
+# Python / FastAPI
+__pycache__/
+*.pyc
+.venv/
+venv/
+*.sqlite3
+*.db
+.env
+
+# Editores / SO
+.vscode/
+.idea/
+.DS_Store
