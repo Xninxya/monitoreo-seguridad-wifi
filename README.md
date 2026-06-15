@@ -13,7 +13,6 @@ mostrando alertas en lenguaje simple para usuarios sin conocimientos técnicos.
 
 ## Integrantes
 - Francisco Ferreira
-- (resto del equipo)
 
 ## Arquitectura
 - Patrón: MVVM (frontend) + arquitectura en capas (backend)
