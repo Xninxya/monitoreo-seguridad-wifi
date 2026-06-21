@@ -25,8 +25,7 @@ npx expo start
 ```
 
 Esto abrirá una página con un **código QR**. Escanéalo con Expo Go (Android)
-o con la cámara (iOS) para correr la app en tu teléfono. Esa misma página
-te da un **enlace** que puedes entregar para el punto 4 y 5 de la entrega.
+o con la cámara (iOS) para correr la app en tu teléfono.
 
 Para generar un **APK** instalable:
 
