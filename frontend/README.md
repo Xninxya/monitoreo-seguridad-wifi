@@ -39,7 +39,7 @@ y `eas build:configure` la primera vez).
 ## Base de datos
 
 `src/services/database.js` crea, al primer arranque, una base de datos
-SQLite **real** en el dispositivo (`monitoreo_seguridad_wifi.db`) con las
+SQLite  en el dispositivo (`monitoreo_seguridad_wifi.db`) con las
 4 tablas de la Ficha (`RedWifi`, `Dispositivo`, `Alerta`,
 `ConfiguracionUsuario`) y la siembra con datos de prueba. Todas las
 pantallas leen y escriben en esa base de datos real (no hay datos
@@ -47,7 +47,7 @@ pantallas leen y escriben en esa base de datos real (no hay datos
 
 ## Arquitectura
 
-Sigue el patrón **MVVM** acordado en la Clínica Técnica (Semana 3):
+Sigue el patrón **MVVM**:
 
 - `src/services/database.js` — acceso a datos (Model)
 - `src/viewmodels/` — hooks con la lógica de cada pantalla (ViewModel)
@@ -56,13 +56,13 @@ Sigue el patrón **MVVM** acordado en la Clínica Técnica (Semana 3):
   PrimaryButton, DeviceCard, AlertCard, ValidatedInput)
 - `src/navigation/AppNavigator.js` — Stack Navigator (React Navigation)
 
-## Qué es real y qué está simulado
+## Qué es real y qué está en proceso
 
 **Real:** la base de datos SQLite, la navegación entre pantallas, el
 formulario de configuración con validación y persistencia, marcar
 dispositivos/alertas y ver los cambios reflejados al instante.
 
-**Simulado (a propósito):** el botón "Escanear red" del Dashboard no
+**en proceso:** el botón "Escanear red" del Dashboard no
 lee la tabla ARP real del router ni hace un escaneo de red real — eso
 requiere un módulo nativo con permisos de red local (fuera del alcance de
 un prototipo en Expo managed workflow). Por ahora solo actualiza la fecha
