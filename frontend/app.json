@@ -1,0 +1,23 @@
+{
+  "expo": {
+    "name": "Monitoreo Seguridad WiFi",
+    "slug": "monitoreo-seguridad-wifi",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "backgroundColor": "#2E75B6"
+    },
+    "assetBundlePatterns": ["**/*"],
+    "android": {
+      "package": "com.segwifi.monitoreo",
+      "adaptiveIcon": {
+        "backgroundColor": "#2E75B6"
+      }
+    },
+    "ios": {
+      "bundleIdentifier": "com.segwifi.monitoreo",
+      "supportsTablet": false
+    }
+  }
+}
