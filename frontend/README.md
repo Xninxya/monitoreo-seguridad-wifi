@@ -1,8 +1,7 @@
 # Monitoreo de Seguridad Personal en Redes Wi-Fi — Prototipo navegable
 
-Proyecto Expo / React Native correspondiente a la **Semana 4**. Implementa
-navegación real entre 5 pantallas, una base de datos SQLite local (con el
-mismo esquema de `Ficha_BD_Prototipo_Semana_4.docx`) y un formulario
+Implementa
+navegación real entre 5 pantallas, una base de datos SQLite local y un formulario
 funcional con validación.
 
 ## Pantallas incluidas
@@ -42,7 +41,7 @@ y `eas build:configure` la primera vez).
 
 `src/services/database.js` crea, al primer arranque, una base de datos
 SQLite **real** en el dispositivo (`monitoreo_seguridad_wifi.db`) con las
-4 tablas de la Ficha BD Semana 4 (`RedWifi`, `Dispositivo`, `Alerta`,
+4 tablas de la Ficha (`RedWifi`, `Dispositivo`, `Alerta`,
 `ConfiguracionUsuario`) y la siembra con datos de prueba. Todas las
 pantallas leen y escriben en esa base de datos real (no hay datos
 "hardcodeados" en los componentes).
@@ -60,26 +59,12 @@ Sigue el patrón **MVVM** acordado en la Clínica Técnica (Semana 3):
 
 ## Qué es real y qué está simulado
 
-✅ **Real:** la base de datos SQLite, la navegación entre pantallas, el
+**Real:** la base de datos SQLite, la navegación entre pantallas, el
 formulario de configuración con validación y persistencia, marcar
 dispositivos/alertas y ver los cambios reflejados al instante.
 
-⚠️ **Simulado (a propósito):** el botón "Escanear red" del Dashboard no
+**Simulado (a propósito):** el botón "Escanear red" del Dashboard no
 lee la tabla ARP real del router ni hace un escaneo de red real — eso
 requiere un módulo nativo con permisos de red local (fuera del alcance de
 un prototipo en Expo managed workflow). Por ahora solo actualiza la fecha
-de "última conexión". Ese es el siguiente paso técnico real: implementar
-el escaneo (o conectarlo al backend FastAPI que ya está definido en el
-stack del proyecto) y reemplazar `simularEscaneo()` en
-`src/services/database.js` por la llamada real.
-
-## Próximos pasos sugeridos
-
-1. Conectar `simularEscaneo()` a un endpoint real del backend FastAPI que
-   lea la tabla ARP del dispositivo o de la red.
-2. Implementar notificaciones push reales (Expo Notifications) cuando se
-   inserte una alerta de tipo `arp_spoofing`.
-3. Agregar pantalla de Login si el proyecto lo requiere, y persistencia de
-   sesión.
-4. Subir este proyecto a su repositorio de GitHub y hacer commits
-   reflejando el avance de la semana (punto 5 de la entrega).
+de "última conexión". 
