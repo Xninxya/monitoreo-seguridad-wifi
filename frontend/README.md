@@ -65,5 +65,5 @@ dispositivos/alertas y ver los cambios reflejados al instante.
 **en proceso:** el botón "Escanear red" del Dashboard no
 lee la tabla ARP real del router ni hace un escaneo de red real — eso
 requiere un módulo nativo con permisos de red local (fuera del alcance de
-un prototipo en Expo managed workflow). Por ahora solo actualiza la fecha
+este prototipo). Por ahora solo actualiza la fecha
 de "última conexión". 
